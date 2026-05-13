@@ -51,7 +51,7 @@ nav.sc{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: var(--dgreen);
+    background-color: var(--lgreen);
     padding: 10px;
     border-radius: 999px;
 }
@@ -74,10 +74,25 @@ section{
     height: auto;
 }
 
-@media(width <= 800px){
-    .navWords{
-        display: none;
-    }
+h1{
+    font-size: 160px;
+    word-break: break-word;
+    overflow-wrap:break-word ;
+    text-shadow: 0px 1px 8px  #ffffb0;
+    letter-spacing: 7px;
+    width: 100%;
+    text-align: center;
+    animation: esquerda 2s ease-in-out;
+}
+h2{
+    font-size: 3vw;
+    letter-spacing: 2px;
+    width: 67%;
+    margin-top: -20px;
+    text-align: center;
+    justify-content: center;
+    animation: direita 2s ease-in-out;
+
 }
 #s1{
     background-image: url(../assets/images/bgtufo.png) ;
@@ -86,3 +101,26 @@ section{
     background-repeat: no-repeat;
     background-size: cover;
 }
+@keyframes esquerda {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+}
+@keyframes direita {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+
+@media(width <= 800px){
+    .navWords{
+        display: none;
+    }
+    #s1{
+        background-image: url(../assets/images/tuff.jpg);
+    }
+}
+
